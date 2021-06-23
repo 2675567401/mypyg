@@ -1,0 +1,126 @@
+/* 列表页css */
+.nav {
+    /* 解决浮动后盒子超出边框使得nav下面的盒子显示异常，将溢出部分隐藏 */
+    overflow: hidden;
+}
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    /* 上右下左 */
+    padding: 3px 0 0 14px;
+}
+.sk_list {
+    float: left;
+}
+.sk_list ul li {
+    float: left;
+}
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+.sk_con {
+    float: left;
+}
+.sk_con ul li {
+    float: left;
+}
+.sk_con ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+.sk_con ul li:last-child a::after {
+    font-family: 'icomoon';
+    content: '\e91e';
+}
+
+/*.sk_bd ul {
+    自动拉大盒子高度，解决浮动后错乱的问题，第二个方法是清除浮动
+    清除浮动用class="clearfix"
+    overflow: auto;
+}*/
+.sk_bd ul li {
+    position: relative;
+    float: left;
+    /* margin: 0 5px 0 5px; */
+    margin-right: 21px;
+    width: 284px;
+    height: 458px;
+    border:1px solid transparent;
+}
+.sk_bd ul li:hover {
+    border:1px solid #c81523;
+}
+/* 将4的倍数选出来 */
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+.sk_bd ul li img {
+    width: 282px;
+    height: 290px;
+}
+.sk_bd ul li .title {
+    padding: 10px 0 0 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+}
+.sk_bd ul li .price {
+    padding: 10px 0 0 10px;
+}
+.sk_bd ul li .price em {
+    font-size: 22px;
+    color: #e60012;
+}
+.sk_bd ul li .price del {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a4a4a4;
+}
+.sk_bd ul li .progress {
+    padding: 0px 0px 0px 10px;
+}
+.style_666 {
+    font: 12px/1.5 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    color: #666;
+}
+.sk_bd ul li .progress .bar {
+    /* 转化为行内元素 */
+    display: inline-block;
+    width: 130px;
+    height: 10px;
+    border: 1px solid #b1191a;
+    /* 元素垂直居中 */
+    vertical-align: middle;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.sk_bd ul li .progress .bar .bar_in {
+    width: 87%;
+    height: 9px;
+    padding-top: -1px;
+    background-color: #f24349;
+    border-radius: 5px;
+}
+.sk_bd ul li .buy {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #b1191a;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+.sk_bd ul li .buy:hover {
+    color: #fff;
+}

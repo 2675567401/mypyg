@@ -1,0 +1,78 @@
+/* 把我们所有标签的内外边距清零 */
+* {
+    margin: 0;
+    padding: 0;
+    /*css3盒子模型*/
+    /* content-box  是默认值。如果你设置一个元素的宽为100px，那么这个元素的内容区会有100px宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。 */
+    /* border-box告诉浏览器你设置的边框和内边距的值是包含在width内的,也就是你设置了这个,内边距将不会撑大盒子大小 */
+    box-sizing: border-box;
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal;
+}
+/* 去掉li 的小圆点 */
+li {
+    list-style: none;
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle;
+}
+
+button {
+    /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+    cursor: pointer;
+}
+
+a {
+    /* 链接颜色 */
+    color: #666;
+    /* 链接去下划线 */
+    text-decoration: none;
+}
+
+a:hover {
+    /* 链接经过后颜色 */
+    color: #c81623;
+}
+
+button,
+input {
+    /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 去掉默认的灰色边框 */
+    border: 0;
+    /* 去掉点击后的边框 */
+    outline: none;
+}
+
+body {
+    /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666;
+}
+
+.hide,
+.none {
+    display: none;
+}
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+}
+
+/* 设置zoom:1可以在IE6下清除浮动、解决margin导致的重叠等问题 */
+.clearfix {
+    *zoom: 1;
+}

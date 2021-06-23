@@ -1,0 +1,444 @@
+/* 声明字体图标 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?tomleg') format('truetype'), url('../fonts/icomoon.woff?tomleg') format('woff'), url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* 版心 */
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* fl向左浮动 */
+
+.fl {
+    float: left;
+}
+
+
+/* fr向右浮动 */
+
+.fr {
+    float: right;
+}
+
+
+/* 字体颜色设置为红 */
+
+.style_red {
+    color: #c81623;
+}
+
+
+/* 快捷导航模块 */
+
+.shortcut {
+    /* 快捷导航条高度 */
+    height: 31px;
+    /* 行高，保证与高度一致，文字将垂直居中 */
+    line-height: 31px;
+    background-color: #f1f1f1;
+}
+
+
+/* 让li向左浮动,必须先设置f1和fr的浮动，才可以设置li向左浮动,上面有声明f1和fr */
+
+.shortcut ul li {
+    float: left;
+}
+
+
+/* 选择所有偶数的li */
+
+.shortcut .fr ul li:nth-child(even) {
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    margin: 9px 15px 0;
+}
+
+
+/* 在arrow-icon后面增加字体图标 */
+
+.arrow-icon::after {
+    font-family: 'icomoon';
+    content: '\e91e';
+    margin-left: 6px;
+}
+
+
+/* header头部模块 */
+
+.header {
+    /* relative是absolute的父级,必须定义了才能使用,不然absolute
+    将跟随网页的上边框和左边框 */
+    position: relative;
+    height: 105px;
+}
+
+
+/* header里的logo模块 */
+
+.logo {
+    /* relative是absolute的父级,必须定义了才能使用,不然absolute
+    将跟随网页的上边框和左边框 */
+    position: absolute;
+    top: 25px;
+    width: 171px;
+    height: 61px;
+}
+
+
+/* logo模块里的超链接 */
+
+.logo a {
+    /* 行内元素转换成块型元素,行内元素无法设置宽度 */
+    display: block;
+    width: 171px;
+    height: 61px;
+    /* background是设置背景图片,这里设置成logo */
+    /* no-repeat是背景不重复 */
+    background: url(../images/logo.png) no-repeat;
+    /* 京东隐藏文字的做法 */
+    font-size: 0;
+    /* 淘宝隐藏文字的做法start */
+    /* text-indent: -9999px; */
+    /* 溢出隐藏 */
+    /* overflow: hidden; */
+    /* 淘宝隐藏文字做法end */
+}
+
+
+/* search搜索模块 */
+
+.search {
+    /* relative是absolute的父级,必须定义了才能使用,不然absolute
+    将跟随网页的上边框和左边框 */
+    /* 这里在header定义了relative后absolute才起作用 */
+    position: absolute;
+    left: 346px;
+    top: 25px;
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191a;
+}
+
+
+/* search搜索模块里的输入框模块 */
+
+.search input {
+    /* 添加浮动,去input和button中间的缝隙 */
+    float: left;
+    width: 454px;
+    height: 32px;
+    padding-left: 10px;
+}
+
+
+/* search搜索模块里的button按钮模块 */
+
+.search button {
+    /* 添加浮动,去input和button中间的缝隙 */
+    /* float:left后浏览器会有错位现象,clear:both可以清除浮动 */
+    float: left;
+    width: 80px;
+    height: 32px;
+    background-color: #b1191a;
+    color: #fff;
+}
+
+
+/* hotwords模块 */
+
+.hotwords {
+    position: absolute;
+    top: 66px;
+    left: 346px;
+}
+
+
+/* hotwords模块的超链接 */
+
+.hotwords a {
+    margin: 0 10px;
+}
+
+
+/* shopcar购物车模块 */
+
+.shopcar {
+    position: absolute;
+    right: 60px;
+    top: 25px;
+    width: 140px;
+    height: 35px;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+    line-height: 35px;
+    text-align: center;
+}
+
+
+/* shopcar购物车前面增加字体图标 */
+
+.shopcar::before {
+    font-family: 'icomoon';
+    content: '\e93a';
+    margin-right: 5px;
+    color: #b1191a;
+}
+
+
+/* shopcar购物车后面增加字体图标 */
+
+.shopcar::after {
+    font-family: 'icomoon';
+    content: '\e920';
+    margin-left: 10px;
+}
+
+.count {
+    position: absolute;
+    top: -5px;
+    /* 从左开始走，字体会从左往右走，如果定义right字体将会从右往左走 */
+    left: 105px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    background-color: #e60012;
+    padding: 0 5px;
+    border-radius: 7px 7px 7px 0;
+}
+
+
+/* nav模块 */
+
+.nav {
+    height: 47px;
+    border-bottom: 2px solid #b1191a;
+}
+
+.nav .dropdown {
+    float: left;
+    width: 210px;
+    height: 45px;
+    background-color: #b1191a;
+}
+
+.nav .navitems {
+    float: left;
+}
+
+
+/* dropdown里的dt盒子 */
+
+.dropdown .dt {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+
+/* dropdown里的dd盒子 */
+
+.dropdown .dd {
+    /* display: none; */
+    width: 210px;
+    height: 465px;
+    background-color: #c81623;
+    margin-top: 2px;
+}
+
+
+/* dropdown里的dd盒子的ul li */
+
+.dropdown .dd ul li {
+    /* 这里在li定义了relative后absolute才起作用 */
+    position: relative;
+    height: 31px;
+    line-height: 31px;
+    margin-left: 2px;
+    padding-left: 10px;
+}
+
+
+/* 经过li的效果 */
+
+.dropdown .dd ul li:hover {
+    background-color: #fff;
+}
+
+
+/* li后面的字体图标 */
+
+.dropdown .dd ul li::after {
+    /* 这里在li定义了relative后absolute才起作用 */
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    color: #fff;
+    font-family: 'icomoon';
+    content: '\e920';
+    font-size: 14px;
+}
+
+
+/* dropdown里的dd盒子的ul li的超链接 */
+
+.dropdown .dd ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/* 经过li后a超链接的变化 */
+
+.dropdown .dd ul li:hover a {
+    color: #c81623;
+}
+
+
+/* navitems的li */
+
+.navitems ul li {
+    float: left;
+}
+
+
+/* navitems的li里的a */
+
+.navitems ul li a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 25px;
+}
+
+
+/* 底部模块 */
+
+.footer {
+    height: 415px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+
+/* 底部模块里的mod_service模块 */
+
+.mod_service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* mod_service模块里的li */
+
+.mod_service ul li {
+    float: left;
+    width: 240px;
+    height: 50px;
+    padding-left: 35px;
+}
+
+
+/* mod_service模块li里的h5 */
+
+.mod_service ul li h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons.png) no-repeat -252px -2px;
+    margin-right: 8px;
+}
+
+
+/* mod_service模块li里的h4 */
+
+.service_txt h4 {
+    font-size: 14px;
+}
+
+
+/* mod_service模块li里的p */
+
+.service_txt p {
+    font-size: 12px;
+}
+
+
+/* mod_help的布局 */
+
+.mod_help {
+    height: 185px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+
+/* 设置所有dl */
+
+.mod_help dl {
+    float: left;
+    width: 200px;
+}
+
+
+/* 选择最后一个dl */
+
+.mod_help dl:last-child {
+    width: 90px;
+    text-align: center;
+}
+
+
+/* mod_help的dt布局 */
+
+.mod_help dl dt {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+/* mod_help的dd布局 */
+
+.mod_help dl dd {
+    /* 字体大小默认为12像素 */
+    font-size: 12px;
+}
+
+/* mod_copyright布局 */ 
+.mod_copyright {
+    text-align: center;
+    /* 内上边距20px */
+    padding-top: 20px;
+}
+
+/* links的布局 */
+.links {
+    /* 外下边距15px */
+    margin-bottom: 15px;
+}
+
+/* links里的超链接a */
+.links a {
+    /* 左右边距3px */
+    margin: 0 3px;
+}
+
+/* copyright的布局 */
+.copyright {
+    line-height: 20px;
+}
